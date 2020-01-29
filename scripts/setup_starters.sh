@@ -3,6 +3,7 @@
 set -e
 
 cd "$(dirname "${BASH_SOURCE}")";
+cd ..
 STARTERS_PATH="$(pwd)"
 
 mkdir -p ~/.helm
@@ -17,4 +18,4 @@ cd ~/.helm
 echo "Creating a soft link from '${STARTERS_PATH}' folder in repo to '~/.helm/starters'"
 ln -s "${STARTERS_PATH}" .
 
-echo "Done, use 'helm create --starter [STARTER]' to use one of the starter charts to create a new chart"
+echo "Done, use 'helm create --starter [STARTER] [NEW-CHART-NAME]' to use one of the starter charts to create a new chart"
